@@ -51,11 +51,12 @@ class PublicController extends AdminbaseController {
     		$this->error(L('PASSWORD_REQUIRED'));
     	}
     	$verrify = I("post.verify");
-    	if(empty($verrify)){
-    		$this->error(L('CAPTCHA_REQUIRED'));
-    	}
+    	//if(empty($verrify)){
+      	//	$this->error(L('CAPTCHA_REQUIRED'));
+    	//}
     	//验证码
-    	if(!sp_check_verify_code()){
+    	//if(!sp_check_verify_code()){
+        if(0){
     		$this->error(L('CAPTCHA_NOT_RIGHT'));
     	}else{
     		$user = D("Common/Users");

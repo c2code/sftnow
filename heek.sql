@@ -4478,38 +4478,38 @@ INSERT INTO `cmf_term_relationships` VALUES ('2', '2', '2', '0', '1');
 -- ----------------------------
 -- Table structure for cmf_users
 -- ----------------------------
-DROP TABLE IF EXISTS `cmf_users`;
-CREATE TABLE `cmf_users` (
-  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
-  `user_login` varchar(60) NOT NULL DEFAULT '' COMMENT '用户名',
-  `user_pass` varchar(64) NOT NULL DEFAULT '' COMMENT '登录密码；sp_password加密',
-  `user_nicename` varchar(50) NOT NULL DEFAULT '' COMMENT '用户美名',
-  `user_email` varchar(100) NOT NULL DEFAULT '' COMMENT '登录邮箱',
-  `user_url` varchar(100) NOT NULL DEFAULT '' COMMENT '用户个人网站',
-  `avatar` varchar(255) DEFAULT NULL COMMENT '用户头像，相对于upload/avatar目录',
-  `sex` smallint(1) DEFAULT '0' COMMENT '性别；0：保密，1：男；2：女',
-  `birthday` date DEFAULT NULL COMMENT '生日',
-  `signature` varchar(255) DEFAULT NULL COMMENT '个性签名',
-  `last_login_ip` varchar(16) DEFAULT NULL COMMENT '最后登录ip',
-  `last_login_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '最后登录时间',
-  `create_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '注册时间',
-  `user_activation_key` varchar(60) NOT NULL DEFAULT '' COMMENT '激活码',
-  `user_status` int(11) NOT NULL DEFAULT '1' COMMENT '用户状态 0：禁用； 1：正常 ；2：未验证',
-  `score` int(11) NOT NULL DEFAULT '0' COMMENT '用户积分',
-  `user_type` smallint(1) DEFAULT '1' COMMENT '用户类型，1:admin ;2:会员',
-  `coin` int(11) NOT NULL DEFAULT '0' COMMENT '金币',
-  `mobile` varchar(20) NOT NULL DEFAULT '' COMMENT '手机号',
-  PRIMARY KEY (`id`),
-  KEY `user_login_key` (`user_login`),
-  KEY `user_nicename` (`user_nicename`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='用户表';
+-- DROP TABLE IF EXISTS `cmf_users`;
+-- CREATE TABLE `cmf_users` (
+--  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+--  `user_login` varchar(60) NOT NULL DEFAULT '' COMMENT '用户名',
+--  `user_pass` varchar(64) NOT NULL DEFAULT '' COMMENT '登录密码；sp_password加密',
+--  `user_nicename` varchar(50) NOT NULL DEFAULT '' COMMENT '用户美名',
+--  `user_email` varchar(100) NOT NULL DEFAULT '' COMMENT '登录邮箱',
+--  `user_url` varchar(100) NOT NULL DEFAULT '' COMMENT '用户个人网站',
+--  `avatar` varchar(255) DEFAULT NULL COMMENT '用户头像，相对于upload/avatar目录',
+--  `sex` smallint(1) DEFAULT '0' COMMENT '性别；0：保密，1：男；2：女',
+--  `birthday` date DEFAULT NULL COMMENT '生日',
+--  `signature` varchar(255) DEFAULT NULL COMMENT '个性签名',
+--  `last_login_ip` varchar(16) DEFAULT NULL COMMENT '最后登录ip',
+--  `last_login_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '最后登录时间',
+--  `create_time` datetime NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '注册时间',
+--  `user_activation_key` varchar(60) NOT NULL DEFAULT '' COMMENT '激活码',
+--  `user_status` int(11) NOT NULL DEFAULT '1' COMMENT '用户状态 0：禁用； 1：正常 ；2：未验证',
+--  `score` int(11) NOT NULL DEFAULT '0' COMMENT '用户积分',
+--  `user_type` smallint(1) DEFAULT '1' COMMENT '用户类型，1:admin ;2:会员',
+--  `coin` int(11) NOT NULL DEFAULT '0' COMMENT '金币',
+--  `mobile` varchar(20) NOT NULL DEFAULT '' COMMENT '手机号',
+--  PRIMARY KEY (`id`),
+--  KEY `user_login_key` (`user_login`),
+--  KEY `user_nicename` (`user_nicename`)
+-- ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='用户表';
 
 -- ----------------------------
 -- Records of cmf_users
 -- ----------------------------
-INSERT INTO `cmf_users` VALUES ('1', 'root', '###4d01480507ad6eff9717de790df7a10b', '何超', 'hhhhhhhelloworld@gmail.com', '', null, '0', null, '', '0.0.0.0', '2016-07-20 08:06:49', '2016-07-12 04:30:41', '', '1', '0', '1', '0', '');
-INSERT INTO `cmf_users` VALUES ('2', 'youke', '###4d01480507ad6eff9717de790df7a10b', '', 'asdasdasd123@gmail.com', '', null, '0', null, null, null, '2000-01-01 00:00:00', '2016-07-12 16:54:27', '', '1', '0', '1', '0', '');
-INSERT INTO `cmf_users` VALUES ('3', 'admin', '###4d01480507ad6eff9717de790df7a10b', '', '123132@gmial.com', '', null, '0', null, null, null, '2000-01-01 00:00:00', '2016-07-12 16:54:57', '', '1', '0', '1', '0', '');
+INSERT INTO `cmf_users` VALUES ('2', 'root', '###4d01480507ad6eff9717de790df7a10b', '何超', 'hhhhhhhelloworld@gmail.com', '', null, '0', null, '', '0.0.0.0', '2016-07-20 08:06:49', '2016-07-12 04:30:41', '', '1', '0', '1', '0', '');
+INSERT INTO `cmf_users` VALUES ('3', 'youke', '###4d01480507ad6eff9717de790df7a10b', '', 'asdasdasd123@gmail.com', '', null, '0', null, null, null, '2000-01-01 00:00:00', '2016-07-12 16:54:27', '', '1', '0', '1', '0', '');
+-- INSERT INTO `cmf_users` VALUES ('3', 'admin', '###7dfe242ee8b844fe292ab94a68bdd034', '', '123132@gmial.com', '', null, '0', null, null, null, '2000-01-01 00:00:00', '2016-07-12 16:54:57', '', '1', '0', '1', '0', '');
 
 -- ----------------------------
 -- Table structure for cmf_user_favorites
